@@ -21,7 +21,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 sh '''
-                docker build --progress=plain \
+                docker build \
                 -t ${ECR_REPO_NAME}:${IMAGE_TAG} \
                 fastapi-app
                 '''
